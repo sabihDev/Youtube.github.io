@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <aside class="collapsible" onclick="CloseDropDown()">
+        <div>
+          <img
+            class="bars collapsible__chevron"
+            src="images/bars.svg"
+            alt="bars"
+          />
+        </div>
+        <div class="header collapsible__content">
+          <div class="side-icons home collapsible__content">
+            <i>
+              <img src="images/home.svg" alt="home" />
+            </i>
+            <p>Home</p>
+          </div>
+          <div class="side-icons collapsible__content">
+            <i>
+              <img src="images/compass.svg" alt="explore" />
+            </i>
+            <p>Explore</p>
+          </div>
+          <div class="side-icons subscription collapsible__content">
+            <i>
+              <img src="images/video-gallary.svg" alt="gallary" />
+            </i>
+            <p>Subscriptions</p>
+          </div>
+          <div class="side-icons collapsible__content">
+            <i>
+              <img src="images/video-library.svg" alt="library" />
+            </i>
+            <p>Library</p>
+          </div>
+        </div>
+      </aside>
+      <div class="main-container">
+        <header>
+          <header class="nav-header">
+            <a href="#">
+              <img
+                src="images/youtube-logo.png"
+                alt="YouTube Logo"
+                class="youtube-logo"
+              />
+            </a>
+            <form class="search-bar" onclick="CloseDropDown()">
+              <input
+                class="search-input"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button type="submit" class="search-btn">
+                <img src="images/magnify.svg" />
+              </button>
+              <div class="mic">
+                <i class="icon" data-feather="mic"></i>
+              </div>
+            </form>
+            <div class="menu-icons column">
+              <div class="menu-btn px-4">
+                <a href="#"
+                  ><abbr title="Create">
+                    <img
+                      id="drop-downs-create"
+                      src="images/video-plus.svg"
+                      alt="Upload Video" /></abbr
+                ></a>
+                <a href="#"
+                  ><abbr title="Notifications">
+                    <img
+                      id="drop-down-notifications-btn"
+                      class="icon"
+                      src="images/bell.svg"
+                      alt="Notifications" /></abbr
+                ></a>
+                <a href="#"
+                  ><abbr title="Account">
+                    <img
+                      class="menu-channel-icon"
+                      id="your-account"
+                      src="http:///unsplash.it/36/36?gravity=center"
+                      alt="Your Channel" /></abbr
+                ></a>
+              </div>
+              <div class="drop-down-create bg-dark hidden">
+                <ul class="list">
+                  <li>
+                    <div class="link">
+                      <img class="icon" data-feather="play" alt="" />
+                      <div class="title">Upload video</div>
+                    </div>
+                  </li>
+                  <li class="top-10">
+                    <div class="link">
+                      <img class="icon" data-feather="radio" alt="" />
+                      <div class="title">Go Live</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="drop-down-notifications bg-dark hidden">
+                <div class="row">
+                  <div class="begin title">Notifications</div>
+                  <div class="finish icon">
+                    <abbr title="Settings"
+                      ><img data-feather="settings"
+                    /></abbr>
+                  </div>
+                </div>
+                <hr />
+                <div class="drop-down-notifications__content">
+                  <div><img class="icon-2x" src="images/bell.svg" /></div>
+                  <div class="desc">
+                    <h1 class="title-center">Your notifications live here</h1>
+                    <p class="desc-center">
+                      Subscribe to your favorite channels to get notified about
+                      their latest videos.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="drop-down-account bg-dark hidden">
+                <div class="account__content">
+                  <div>
+                    <img
+                      class="profile-pic"
+                      src="http:///unsplash.it/96/96?gravity=center"
+                      alt="Your Channel"
+                    />
+                  </div>
+                  <div class="account__details">
+                    <h3 class="user-name">User name</h3>
+                    <h4 class="user-id">@user-id</h4>
+                    <div class="link-blue">Manage your Google Account</div>
+                  </div>
+                </div>
+                <div class="hr">
+                  <hr class="p-0 m-0" />
+                  <ul class="list p-4">
+                    <li>
+                      <div class="link">
+                        <img class="icon p-2" data-feather="user" alt="" />
+                        <div class="title">Your channel</div>
+                      </div>
+                    </li>
+                    <li class="top-10">
+                      <div class="link">
+                        <img
+                          class="icon-1x p-2"
+                          src="images/youtube-studio-svgrepo-com.svg"
+                          alt=""
+                        />
+                        <div class="title">YouTube Studio</div>
+                      </div>
+                    </li>
+                    <li class="top-10">
+                      <div class="link">
+                        <img
+                          class="icon-1x p-2"
+                          src="images/switch_account-white.svg"
+                          alt=""
+                        />
+                        <div class="title">Switch accounts</div>
+                      </div>
+                    </li>
+                    <li class="top-10">
+                      <div class="link">
+                        <img
+                          class="icon-1x p-2"
+                          data-feather="log-out"
+                          alt=""
+                        />
+                        <div class="title">Sign out</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="hr">
+                  <hr />
+                  <ul class="list p-4">
+                    <li>
+                      <div class="link">
+                        <img
+                          class="p-2 icon-1x"
+                          src="images/dollar-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                        <div class="title">Prchases and membership</div>
+                      </div>
+                    </li>
+                    <li class="top-10">
+                      <div class="link">
+                        <img
+                          class="icon-1x p-2"
+                          src="images/user-shield-icon-18-64.png"
+                          alt=""
+                        />
+                        <div class="title">Your data in YouTube</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="hr">
+                  <hr />
+                  <ul class="list p-4">
+                    <li>
+                      <div class="link">
+                        <img class="p-2 icon-1x" data-feather="moon" alt="" />
+                        <div class="title">Appearance: Device theme</div>
+                      </div>
+                    </li>
+                    <li class="top-10">
+                      <div class="link">
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <!-- License: Apache. Made by bytedance: https://github.com/bytedance/IconPark -->
+                        <svg
+                          class="icon-1x p-2"
+                          viewBox="0 0 48 48"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            width="48"
+                            height="48"
+                            fill="white"
+                            fill-opacity="0.01"
+                          />
+                          <path
+                            d="M42 42L39.7143 37M26 42L28.2857 37M28.2857 37L34 24L39.7143 37M28.2857 37H39.7143"
+                            stroke="#fff"
+                            stroke-width="4"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M16 6L17 9"
+                            stroke="#fff"
+                            stroke-width="4"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M6 11H28"
+                            stroke="#fff"
+                            stroke-width="4"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M10 16C10 16 11.7895 22.2609 16.2632 25.7391C20.7368 29.2174 28 32 28 32"
+                            stroke="#fff"
+                            stroke-width="4"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M24 11C24 11 22.2105 19.2174 17.7368 23.7826C13.2632 28.3478 6 32 6 32"
+                            stroke="#fff"
+                            stroke-width="4"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <div class="title">Language: English</div>
+                      </div>
+                    </li>
+                    <li class="top-10">
+                      <div class="link">
+                        <img
+                          class="p-2 icon-1x"
+                          src="images/noun-user-shield-1569189.svg"
+                          alt=""
+                        />
+                        <div class="title">Restricted mode: Off</div>
+                      </div>
+                    </li>
+                    <li class="top-10">
+                      <div class="link">
+                        <img class="p-2 icon-1x" data-feather="globe" alt="" />
+                        <div class="title">Location: Pakistan</div>
+                      </div>
+                    </li>
+                    <li class="top-10">
+                      <div class="link">
+                        <img
+                          class="p-2 icon-1x"
+                          src="images/keyboard.svg"
+                          alt=""
+                        />
+                        <div class="title">Keyboard Shortcuts</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="hr">
+                  <hr />
+                  <ul class="list p-4">
+                    <li>
+                      <div class="link">
+                        <img
+                          class="p-2 icon-1x"
+                          data-feather="settings"
+                          alt=""
+                        />
+                        <div class="title">Settings</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="hr">
+                  <hr />
+                  <ul class="list p-4">
+                    <li>
+                      <div class="link">
+                        <img
+                          class="p-2 icon-1x"
+                          data-feather="help-circle"
+                          alt=""
+                        />
+                        <div class="title">Help</div>
+                      </div>
+                    </li>
+                    <li class="top-10">
+                      <div class="link">
+                        <img
+                          class="p-2 icon-1x"
+                          src="images/feedback.svg"
+                          alt=""
+                        />
+                        <div class="title">Send feedback</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </header>
+          <div class="tags">
+            <div class="tag dark">All</div>
+            <div class="tag light">Mixes</div>
+            <div class="tag light">Crypto</div>
+            <div class="tag light">Html</div>
+            <div class="tag light">CSS</div>
+            <div class="tag light">Javascript</div>
+          </div>
+        </header>
+        <main onclick="CloseDropDown()">
+          <div class="videos">
+            <section class="video-section">
+              <article class="video-container">
+                <a href="#" class="thumbnail duration" data-duration="12:24">
+                  <img
+                    class="thumbnail-image"
+                    src="http://unsplash.it/250/150?gravity=center"
+                  />
+                </a>
+                <div class="video-bottom-section">
+                  <a href="#">
+                    <img
+                      class="channel-icon"
+                      src="http://unsplash.it/36/36?gravity=center"
+                    />
+                  </a>
+                  <div class="video-details">
+                    <a href="#" class="video-title">Video Title</a>
+                    <a href="#" class="video-channel-name">Channel Name</a>
+                    <div class="video-metadata">
+                      <span>12K views</span>
+                      •
+                      <span>1 week ago</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="video-container">
+                <a href="#" class="thumbnail" data-duration="12:24">
+                  <img
+                    class="thumbnail-image"
+                    src="http://unsplash.it/250/150?gravity=center"
+                  />
+                </a>
+                <div class="video-bottom-section">
+                  <a href="#">
+                    <img
+                      class="channel-icon"
+                      src="http://unsplash.it/36/36?gravity=center"
+                    />
+                  </a>
+                  <div class="video-details">
+                    <a href="#" class="video-title">Video Title</a>
+                    <a href="#" class="video-channel-name">Channel Name</a>
+                    <div class="video-metadata">
+                      <span>12K views</span>
+                      •
+                      <span>1 week ago</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="video-container">
+                <a href="#" class="thumbnail" data-duration="12:24">
+                  <img
+                    class="thumbnail-image"
+                    src="http://unsplash.it/250/150?gravity=center"
+                  />
+                </a>
+                <div class="video-bottom-section">
+                  <a href="#">
+                    <img
+                      class="channel-icon"
+                      src="http://unsplash.it/36/36?gravity=center"
+                    />
+                  </a>
+                  <div class="video-details">
+                    <a href="#" class="video-title">Video Title</a>
+                    <a href="#" class="video-channel-name">Channel Name</a>
+                    <div class="video-metadata">
+                      <span>12K views</span>
+                      •
+                      <span>1 week ago</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="video-container">
+                <a href="#" class="thumbnail" data-duration="12:24">
+                  <img
+                    class="thumbnail-image"
+                    src="http://unsplash.it/250/150?gravity=center"
+                  />
+                </a>
+                <div class="video-bottom-section">
+                  <a href="#">
+                    <img
+                      class="channel-icon"
+                      src="http://unsplash.it/36/36?gravity=center"
+                    />
+                  </a>
+                  <div class="video-details">
+                    <a href="#" class="video-title">Video Title</a>
+                    <a href="#" class="video-channel-name">Channel Name</a>
+                    <div class="video-metadata">
+                      <span>12K views</span>
+                      •
+                      <span>1 week ago</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="video-container">
+                <a href="#" class="thumbnail" data-duration="12:24">
+                  <img
+                    class="thumbnail-image"
+                    src="http://unsplash.it/250/150?gravity=center"
+                  />
+                </a>
+                <div class="video-bottom-section">
+                  <a href="#">
+                    <img
+                      class="channel-icon"
+                      src="http://unsplash.it/36/36?gravity=center"
+                    />
+                  </a>
+                  <div class="video-details">
+                    <a href="#" class="video-title">Video Title</a>
+                    <a href="#" class="video-channel-name">Channel Name</a>
+                    <div class="video-metadata">
+                      <span>12K views</span>
+                      •
+                      <span>1 week ago</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="video-container">
+                <a href="#" class="thumbnail" data-duration="12:24">
+                  <img
+                    class="thumbnail-image"
+                    src="http://unsplash.it/250/150?gravity=center"
+                  />
+                </a>
+                <div class="video-bottom-section">
+                  <a href="#">
+                    <img
+                      class="channel-icon"
+                      src="http://unsplash.it/36/36?gravity=center"
+                    />
+                  </a>
+                  <div class="video-details">
+                    <a href="#" class="video-title">Video Title</a>
+                    <a href="#" class="video-channel-name">Channel Name</a>
+                    <div class="video-metadata">
+                      <span>12K views</span>
+                      •
+                      <span>1 week ago</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </section>
+            <section class="video-section vote-section">
+              <h2 class="video-section-title">
+                Latest YouTube posts
+                <button
+                  class="video-section-title-close data-close-post"
+                  onclick="CloseFunc('post')"
+                >
+                  &times;
+                </button>
+              </h2>
+              <article class="vote__container">
+                <div class="vote__container__upper-section">
+                  <a href="#">
+                    <img
+                      class="channel-icon"
+                      src="http://unsplash.it/36/36?gravity=center"
+                    />
+                  </a>
+                  <div class="video-details">
+                    <a href="#" class="video-channel-name">Channel Name</a>
+                    <div class="video-metadata">
+                      •
+                      <span>1 week ago</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="vote__container__title">
+                  <a href="#" class="video-title">Post Title</a>
+                </div>
+                <div class="voted">
+                  <div class="video-metadata">
+                    <span>12K voted</span>
+                  </div>
+                </div>
+                <div class="vote__btn">
+                  <button class="btn-stretch">Vote Now</button>
+                </div>
+                <div class="vote__container__bottom-section">
+                  <div class="start">
+                    <div class="like">
+                      <i class="icon" data-feather="thumbs-up"></i>
+                      12K
+                    </div>
+                    <div class="dislike">
+                      <i class="icon" data-feather="thumbs-down"></i>
+                    </div>
+                  </div>
+                  <div class="end">
+                    <div class="comments">
+                      <i class="icon" data-feather="message-square"></i>
+                      43k
+                    </div>
+                    <div class="dots">
+                      <i class="icon" data-feather="more-vertical"></i>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="vote__container">
+                <div class="vote__container__upper-section">
+                  <a href="#">
+                    <img
+                      class="channel-icon"
+                      src="http://unsplash.it/36/36?gravity=center"
+                    />
+                  </a>
+                  <div class="video-details">
+                    <a href="#" class="video-channel-name">Channel Name</a>
+                    <div class="video-metadata">
+                      •
+                      <span>1 week ago</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="vote__container__title">
+                  <a href="#" class="video-title">Post Title</a>
+                </div>
+                <div class="voted">
+                  <div class="video-metadata">
+                    <span>12K voted</span>
+                  </div>
+                </div>
+                <div class="vote__btn">
+                  <button class="btn-stretch">Vote Now</button>
+                </div>
+                <div class="vote__container__bottom-section">
+                  <div class="start">
+                    <div class="like">
+                      <i class="icon" data-feather="thumbs-up"></i>
+                      12K
+                    </div>
+                    <div class="dislike">
+                      <i class="icon" data-feather="thumbs-down"></i>
+                    </div>
+                  </div>
+                  <div class="end">
+                    <div class="comments">
+                      <i class="icon" data-feather="message-square"></i>
+                      43k
+                    </div>
+                    <div class="dots">
+                      <i class="icon" data-feather="more-vertical"></i>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="vote__container">
+                <div class="vote__container__upper-section">
+                  <a href="#">
+                    <img
+                      class="channel-icon"
+                      src="http://unsplash.it/36/36?gravity=center"
+                    />
+                  </a>
+                  <div class="video-details">
+                    <a href="#" class="video-channel-name">Channel Name</a>
+                    <div class="video-metadata">
+                      •
+                      <span>1 week ago</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="vote__container__title">
+                  <a href="#" class="video-title">Post Title</a>
+                </div>
+                <div class="voted">
+                  <div class="video-metadata">
+                    <span>12K voted</span>
+                  </div>
+                </div>
+                <div class="vote__btn">
+                  <button class="btn-stretch">Vote Now</button>
+                </div>
+                <div class="vote__container__bottom-section">
+                  <div class="start">
+                    <div class="like">
+                      <i class="icon" data-feather="thumbs-up"></i>
+                      12K
+                    </div>
+                    <div class="dislike">
+                      <i class="icon" data-feather="thumbs-down"></i>
+                    </div>
+                  </div>
+                  <div class="end">
+                    <div class="comments">
+                      <i class="icon" data-feather="message-square"></i>
+                      43k
+                    </div>
+                    <div class="dots">
+                      <i class="icon" data-feather="more-vertical"></i>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="vote__container">
+                <div class="vote__container__upper-section">
+                  <a href="#">
+                    <img
+                      class="channel-icon"
+                      src="http://unsplash.it/36/36?gravity=center"
+                    />
+                  </a>
+                  <div class="video-details">
+                    <a href="#" class="video-channel-name">Channel Name</a>
+                    <div class="video-metadata">
+                      •
+                      <span>1 week ago</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="vote__container__title">
+                  <a href="#" class="video-title">Post Title</a>
+                </div>
+                <div class="voted">
+                  <div class="video-metadata">
+                    <span>12K voted</span>
+                  </div>
+                </div>
+                <div class="vote__btn">
+                  <button class="btn-stretch">Vote Now</button>
+                </div>
+                <div class="vote__container__bottom-section">
+                  <div class="start">
+                    <div class="like">
+                      <i class="icon" data-feather="thumbs-up"></i>
+                      12K
+                    </div>
+                    <div class="dislike">
+                      <i class="icon" data-feather="thumbs-down"></i>
+                    </div>
+                  </div>
+                  <div class="end">
+                    <div class="comments">
+                      <i class="icon" data-feather="message-square"></i>
+                      43k
+                    </div>
+                    <div class="dots">
+                      <i class="icon" data-feather="more-vertical"></i>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="vote__container">
+                <div class="vote__container__upper-section">
+                  <a href="#">
+                    <img
+                      class="channel-icon"
+                      src="http://unsplash.it/36/36?gravity=center"
+                    />
+                  </a>
+                  <div class="video-details">
+                    <a href="#" class="video-channel-name">Channel Name</a>
+                    <div class="video-metadata">
+                      •
+                      <span>1 week ago</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="vote__container__title">
+                  <a href="#" class="video-title">Post Title</a>
+                </div>
+                <div class="voted">
+                  <div class="video-metadata">
+                    <span>12K voted</span>
+                  </div>
+                </div>
+                <div class="vote__btn">
+                  <button class="btn-stretch">Vote Now</button>
+                </div>
+                <div class="vote__container__bottom-section">
+                  <div class="start">
+                    <div class="like">
+                      <i class="icon" data-feather="thumbs-up"></i>
+                      12K
+                    </div>
+                    <div class="dislike">
+                      <i class="icon" data-feather="thumbs-down"></i>
+                    </div>
+                  </div>
+                  <div class="end">
+                    <div class="comments">
+                      <i class="icon" data-feather="message-square"></i>
+                      43k
+                    </div>
+                    <div class="dots">
+                      <i class="icon" data-feather="more-vertical"></i>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="vote__container">
+                <div class="vote__container__upper-section">
+                  <a href="#">
+                    <img
+                      class="channel-icon"
+                      src="http://unsplash.it/36/36?gravity=center"
+                    />
+                  </a>
+                  <div class="video-details">
+                    <a href="#" class="video-channel-name">Channel Name</a>
+                    <div class="video-metadata">
+                      •
+                      <span>1 week ago</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="vote__container__title">
+                  <a href="#" class="video-title">Post Title</a>
+                </div>
+                <div class="voted">
+                  <div class="video-metadata">
+                    <span>12K voted</span>
+                  </div>
+                </div>
+                <div class="vote__btn">
+                  <button class="btn-stretch">Vote Now</button>
+                </div>
+                <div class="vote__container__bottom-section">
+                  <div class="start">
+                    <div class="like">
+                      <i class="icon" data-feather="thumbs-up"></i>
+                      12K
+                    </div>
+                    <div class="dislike">
+                      <i class="icon" data-feather="thumbs-down"></i>
+                    </div>
+                  </div>
+                  <div class="end">
+                    <div class="comments">
+                      <i class="icon" data-feather="message-square"></i>
+                      43k
+                    </div>
+                    <div class="dots">
+                      <i class="icon" data-feather="more-vertical"></i>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </section>
+            <section class="short-section video-section">
+              <h2 class="video-section-title">
+                Shorts
+                <button
+                  class="video-section-title-close data-close-short"
+                  onclick="CloseFunc('short')"
+                >
+                  &times;
+                </button>
+              </h2>
+              <div class="short-container">
+                <div class="short__content">
+                  <div class="short-prototype">
+                    <div class="main-image">
+                      <img class="thumbnail-image" src="images/short.jpg" />
+                    </div>
+                    <div class="video-details">
+                      <div class="video-title">
+                        The greatest clutch player in football history
+                      </div>
+                      <div class="video-metadata">80k views</div>
+                    </div>
+                  </div>
+                  <div class="short-prototype">
+                    <div class="main-image">
+                      <img class="thumbnail-image" src="images/short.jpg" />
+                    </div>
+                    <div class="video-details">
+                      <div class="video-title">
+                        The greatest clutch player in football history
+                      </div>
+                      <div class="video-metadata">80k views</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="short__content">
+                  <div class="short-prototype">
+                    <div class="main-image">
+                      <img class="thumbnail-image" src="images/short.jpg" />
+                    </div>
+                    <div class="video-details">
+                      <div class="video-title">
+                        The greatest clutch player in football history
+                      </div>
+                      <div class="video-metadata">80k views</div>
+                    </div>
+                  </div>
+                  <div class="short-prototype">
+                    <div class="main-image">
+                      <img class="thumbnail-image" src="images/short.jpg" />
+                    </div>
+                    <div class="video-details">
+                      <div class="video-title">
+                        The greatest clutch player in football history
+                      </div>
+                      <div class="video-metadata">80k views</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+
+    <script>
+      feather.replace();
+    </script>
+    <!-- <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script> -->
+    <!-- <script src="js/main.js"></script> -->
+    <!-- <script src="https://apis.google.com/js/api.js"></script> -->
+  </body>
+</html>

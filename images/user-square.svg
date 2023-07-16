@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="UserSquare">
+    <rect width="256" height="256" fill="none"></rect>
+    <circle cx="128" cy="120" r="40" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" class="colorStroke000000 svgStroke"></circle>
+    <rect width="176" height="176" x="40" y="40" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" rx="8" class="colorStroke000000 svgStroke"></rect>
+    <path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M57.78418,215.99979a72.02025,72.02025,0,0,1,140.43164,0" class="colorStroke000000 svgStroke"></path>
+</svg>
